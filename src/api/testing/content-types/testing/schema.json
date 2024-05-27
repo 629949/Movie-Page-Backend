@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "testings",
+  "info": {
+    "singularName": "testing",
+    "pluralName": "testings",
+    "displayName": "Testing",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "testingPage": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "testComponent": {
+      "type": "component",
+      "repeatable": false,
+      "component": "components.title"
+    }
+  }
+}

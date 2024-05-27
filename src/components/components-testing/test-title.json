@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_components_testing_test_titles",
+  "info": {
+    "displayName": "testTitle"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}

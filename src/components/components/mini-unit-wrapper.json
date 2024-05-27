@@ -1,7 +1,8 @@
 {
   "collectionName": "components_components_mini_unit_wrappers",
   "info": {
-    "displayName": "mini Unit Wrapper"
+    "displayName": "mini Unit Wrapper",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -9,11 +10,12 @@
       "type": "string"
     },
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     }
   }
 }

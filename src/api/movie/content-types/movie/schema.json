@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "movies",
+  "info": {
+    "singularName": "movie",
+    "pluralName": "movies",
+    "displayName": "movie",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "genre": {
+      "type": "enumeration",
+      "enum": [
+        "Action",
+        "Comedy",
+        "Romance",
+        "Animation"
+      ]
+    },
+    "imageUrl": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
