@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_components_unit_wrappers",
+  "info": {
+    "displayName": "Unit Wrapper"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "text": {
+      "type": "string"
+    }
+  }
+}

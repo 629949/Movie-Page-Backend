@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * genre controller
+ * page controller
  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::genre.genre');
+module.exports = createCoreController('api::page.page');
