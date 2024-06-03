@@ -40,6 +40,9 @@
     "imageUrl": {
       "type": "string",
       "required": true
+    },
+    "link": {
+      "type": "string"
     }
   }
 }

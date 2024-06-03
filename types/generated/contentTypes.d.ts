@@ -725,6 +725,7 @@ export interface ApiMovieMovie extends Schema.CollectionType {
     image: Attribute.Media & Attribute.Required;
     genre: Attribute.Enumeration<['Action', 'Comedy', 'Romance', 'Animation']>;
     imageUrl: Attribute.String & Attribute.Required;
+    link: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
