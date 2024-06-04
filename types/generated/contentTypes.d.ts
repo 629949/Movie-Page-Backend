@@ -677,6 +677,109 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiActionMovieActionMovie extends Schema.CollectionType {
+  collectionName: 'action_movies';
+  info: {
+    singularName: 'action-movie';
+    pluralName: 'action-movies';
+    displayName: 'Action-Movie';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String & Attribute.Required;
+    genre: Attribute.Enumeration<['Action']>;
+    About: Attribute.Text & Attribute.Required;
+    trailerLink: Attribute.String & Attribute.Required;
+    coverImage: Attribute.Media & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::action-movie.action-movie',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::action-movie.action-movie',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiAnimationMovieAnimationMovie extends Schema.CollectionType {
+  collectionName: 'animation_movies';
+  info: {
+    singularName: 'animation-movie';
+    pluralName: 'animation-movies';
+    displayName: 'Animation-Movie';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    genre: Attribute.Enumeration<['Animation']>;
+    About: Attribute.Text;
+    trailerLink: Attribute.String;
+    coverImage: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::animation-movie.animation-movie',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::animation-movie.animation-movie',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiComedyMovieComedyMovie extends Schema.CollectionType {
+  collectionName: 'comedy_movies';
+  info: {
+    singularName: 'comedy-movie';
+    pluralName: 'comedy-movies';
+    displayName: 'Comedy-Movie';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    genre: Attribute.Enumeration<['Comedy']>;
+    coveImage: Attribute.Media;
+    About: Attribute.Text;
+    trailerLink: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::comedy-movie.comedy-movie',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::comedy-movie.comedy-movie',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiGenreGenre extends Schema.CollectionType {
   collectionName: 'genres';
   info: {
@@ -725,7 +828,6 @@ export interface ApiMovieMovie extends Schema.CollectionType {
     image: Attribute.Media & Attribute.Required;
     genre: Attribute.Enumeration<['Action', 'Comedy', 'Romance', 'Animation']>;
     imageUrl: Attribute.String & Attribute.Required;
-    link: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -765,6 +867,40 @@ export interface ApiPagePage extends Schema.CollectionType {
     createdBy: Attribute.Relation<'api::page.page', 'oneToOne', 'admin::user'> &
       Attribute.Private;
     updatedBy: Attribute.Relation<'api::page.page', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
+export interface ApiRomanceMovieRomanceMovie extends Schema.CollectionType {
+  collectionName: 'romance_movies';
+  info: {
+    singularName: 'romance-movie';
+    pluralName: 'romance-movies';
+    displayName: 'Romance-Movie';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    genre: Attribute.Enumeration<['Romance']>;
+    About: Attribute.Text;
+    coverImage: Attribute.Media;
+    trailerLink: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::romance-movie.romance-movie',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::romance-movie.romance-movie',
+      'oneToOne',
+      'admin::user'
+    > &
       Attribute.Private;
   };
 }
@@ -818,9 +954,13 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::action-movie.action-movie': ApiActionMovieActionMovie;
+      'api::animation-movie.animation-movie': ApiAnimationMovieAnimationMovie;
+      'api::comedy-movie.comedy-movie': ApiComedyMovieComedyMovie;
       'api::genre.genre': ApiGenreGenre;
       'api::movie.movie': ApiMovieMovie;
       'api::page.page': ApiPagePage;
+      'api::romance-movie.romance-movie': ApiRomanceMovieRomanceMovie;
       'api::testing.testing': ApiTestingTesting;
     }
   }
