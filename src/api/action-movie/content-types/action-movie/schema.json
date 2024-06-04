@@ -30,7 +30,7 @@
       "type": "string",
       "required": true
     },
-    "coverImage": {
+    "imageUrl": {
       "type": "media",
       "multiple": true,
       "required": true,

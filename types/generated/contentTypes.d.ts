@@ -693,7 +693,7 @@ export interface ApiActionMovieActionMovie extends Schema.CollectionType {
     genre: Attribute.Enumeration<['Action']>;
     About: Attribute.Text & Attribute.Required;
     trailerLink: Attribute.String & Attribute.Required;
-    coverImage: Attribute.Media & Attribute.Required;
+    imageUrl: Attribute.Media & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
